@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let button of buttons) {
         button.addEventListener("click", function(){
         if (this.getAttribute("data-type") === "hit"){
-            alert("You clicked hit!")
+            runGame();
         } else if (this.getAttribute("data-type") === "hold"){
             alert("You clicked hold!")
         } else {
@@ -17,9 +17,26 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
+/**
+ * the main game loop, which will start when the user clicks 'hit me!'
+ */
 function runGame() {
+
+    // creates two random numbers out of the possible cards/numbers of the 21 game
     let allCards = [1, 2, 3, 11, 7, 8, 9, 10, 11];
     let playerCard = allCards[Math.floor(Math.random() * allCards.length)];
     let bankCard = allCards[Math.floor(Math.random() * allCards.length)];
-    console.log(playerCard, bankCard);
+    
+    let playerScore = parseInt(document.getElementById("playerScore").innerText);
+    if(playerScore < 21){
+        document.getElementById("playersCard").innerText = playerCard;
+        incrementPlayerScore(playerCard);
+    } else {
+        alert("You have lost, click the reset button to start again");
+    }
+}
+
+function incrementPlayerScore(playerCard) {
+    let oldScore = parseInt(document.getElementById("playerScore").innerText);
+    document.getElementById("playerScore").innerText= oldScore + playerCard;
 }
