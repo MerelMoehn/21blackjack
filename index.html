@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poiret+One&display=swap');
     </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Document</title>
@@ -18,14 +20,29 @@
 <body>
     <h1 class="heading">Twenty-one</h1>
 
-    <div class="explanation-area">Explanation</div>
+    <div class="explanation-area">
+        <h2>Game Explanation</h2>
+        <p>Welcome to Twenty-one! In this game you're going to try to win from the bank by coming as close as possible
+            to 21. If you go over 21, you lost. Only if you are under 21 but closer to 21 than the bank, you win! Be
+            smart, and don't be to cocky! Click, 'Hit Me!' to start the game. Good luck!</p>
+    </div>
 
-    <div class="game-area"></div>
+    <div class="game-area">
+        <div class="controls-area"></div>
+        <button class="btn btn--big btn--green">Hit me!</button>
+        <button class="btn btn--big btn--orange">Hold please!</button>
+        <button class="btn btn--big btn--grey">Reset</button>
+    </div>
+
     <div class="score-area">
-        <p class="scores">Players currentCard <span id="playersCard">0</span></p>
-        <p class="scores">Players totalScore <span id="playerScore">0</span></p>
-        <p class="scores">Bank's currentCard <span id="bankCard">0</span></p>
-        <p class="scores">Bank's totalScore <span id="bankScore">0</span></p>
+        <div class="player-scores">
+            <p class="scores">You got: <span id="playersCard">0</span> Your current total score = <span
+                    id="playerScore">0</span></p>
+        </div>
+        <div class="bank-scores">
+            <p class="scores">The bank got: <span id="bankCard">0</span> The bank's current total score = <span
+                    id="bankScore">0</span></p>
+        </div>
     </div>
 
     <script src="./assets/js/script.js"></script>
