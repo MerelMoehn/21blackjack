@@ -18,7 +18,7 @@ body {
 .explanation-area {
     width: 85%;
     height: 65vh;
-    max-height: 200px;
+    max-height: 300px;
     max-width: 830px;
     margin-left: auto;
     margin-right: auto;
@@ -54,6 +54,8 @@ body {
     height: 60px;
     font-family: "Poiret One", sans-serif;
     text-transform: uppercase;
+    font-weight: 300;
+    font-size: 20px;
     letter-spacing: 1.2px;
     color: black;
 }
@@ -63,11 +65,10 @@ body {
 }
 
 .btn--big {
-    padding-top: 10px;
     background-color: white;
-    border: 10px solid;
+    border: 5px solid;
     width: 100px;
-    height: 100px;
+    height: 75px;
     margin: 0 30px;
     transition: all 0.5s;
 }
@@ -83,20 +84,19 @@ body {
     color: white;
 }
 
-.btn--orange {
+.btn--black {
     border-color: black;
     color: black;
 }
 
-.btn--orange:active,
-.btn--orange:hover {
-    background-color: darkorange;
+.btn--black:active,
+.btn--black:hover {
+    background-color: black;
     color: white;
 }
 
 .btn--grey {
     border-color: grey;
-    color: grey;
 }
 
 .btn--red:active,
