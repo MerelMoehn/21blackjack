@@ -16,13 +16,91 @@ body {
 
 /* --------- Explanation Area layout */
 .explanation-area {
-    box-sizing: border-box;
-    background-color: #b4b4b4;
     width: 85%;
     height: 65vh;
-    max-height: 250px;
+    max-height: 200px;
     max-width: 830px;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
+}
+
+.controls-area {
+    width: 85%;
+    height: 65vh;
+    max-height: 100px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+.score-area {
+    background-color: #E6ECF0;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 150px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+/* --------- Buttons */
+
+.btn {
+    width: 220px;
+    height: 60px;
+    font-family: "Poiret One", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: black;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn--big {
+    padding-top: 10px;
+    background-color: white;
+    border: 10px solid;
+    width: 100px;
+    height: 100px;
+    margin: 0 30px;
+    transition: all 0.5s;
+}
+
+.btn--green {
+    border-color: green;
+    color: green;
+}
+
+.btn--green:active,
+.btn--green:hover {
+    background-color: green;
+    color: white;
+}
+
+.btn--orange {
+    border-color: black;
+    color: black;
+}
+
+.btn--orange:active,
+.btn--orange:hover {
+    background-color: darkorange;
+    color: white;
+}
+
+.btn--grey {
+    border-color: grey;
+    color: grey;
+}
+
+.btn--red:active,
+.btn--red:hover {
+    background-color: grey;
+    color: white;
 }
