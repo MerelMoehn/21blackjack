@@ -34,9 +34,25 @@ function runGame() {
     } else {
         alert("You have lost, click the reset button to start again");
     }
+
+    let bankScore = parseInt(document.getElementById("bankScore").innerText);
+    if(bankScore < 17){
+        document.getElementById("bankCard").innerText = bankCard;
+        incrementBankScore(bankCard);
+    } else {
+        alert("The bank will hold");
+        bankCard = 0;
+        incrementBankScore(bankCard);
+    }
+
 }
 
 function incrementPlayerScore(playerCard) {
     let oldScore = parseInt(document.getElementById("playerScore").innerText);
     document.getElementById("playerScore").innerText= oldScore + playerCard;
+}
+
+function incrementBankScore(bankCard) {
+    let oldScore = parseInt(document.getElementById("bankScore").innerText);
+    document.getElementById("bankScore").innerText= oldScore + bankCard;
 }
