@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.getAttribute("data-type") === "hit") {
                 runGame("hit");
             } else if (this.getAttribute("data-type") === "hold") {
-                runGame("hold")
+                runGame("hold");
             } else {
                 alert("You clicked reset!")
             }
@@ -26,29 +26,34 @@ function runGame(selectedControl) {
     let allCards = [1, 2, 3, 11, 7, 8, 9, 10, 11];
     let playerCard = allCards[Math.floor(Math.random() * allCards.length)];
     let bankCard = allCards[Math.floor(Math.random() * allCards.length)];
-    let bankScore = 0;
 
     if (selectedControl === "hit") {
         let playerScore = parseInt(document.getElementById("playerScore").innerText);
         if (playerScore < 21) {
             document.getElementById("playersCard").innerText = playerCard;
             incrementPlayerScore(playerCard);
-            playBank(bankCard);
         } else {
-            alert("You have lost, click the reset button to start again");
+            alert("Aii you should have stopped earlier, you lost!");
+            playBank(bankCard);
         }
     }
 
     if (selectedControl === "hold") {
-        do {
-            bankScore = bankScore + bankCard;
-          }
-          while (bankScore < 17);
-        document.getElementById("bankScore").innerText = bankScore;
+        playBank(bankCard);
     }
+
 }
 
-    function incrementPlayerScore(playerCard) {
-        let oldScore = parseInt(document.getElementById("playerScore").innerText);
-        document.getElementById("playerScore").innerText = oldScore + playerCard;
+function incrementPlayerScore(playerCard) {
+    let oldScore = parseInt(document.getElementById("playerScore").innerText);
+    document.getElementById("playerScore").innerText = oldScore + playerCard;
+}
+
+function playBank(bankCard) {
+    let bankScore = 0;
+    do {
+        bankScore = bankScore + bankCard;
     }
+    while (bankScore < 17);
+    document.getElementById("bankScore").innerText = bankScore;
+}
