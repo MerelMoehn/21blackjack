@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 runGame("hit");
             } else if (this.getAttribute("data-type") === "hold") {
                 runGame("hold");
+            } else if (this.getAttribute("data-type") === "reset") {
+                reset();
             } else {
-                alert("You clicked reset!")
+                alert("You did not select anything")
             }
         })
     }
@@ -67,4 +69,12 @@ if(playersTotalScore > computersTotalScore && playersTotalScore < 22){
 } else {
     document.getElementById("winner").innerText = "Ai, the computer won, you lost!";
 }
+}
+
+function reset(){
+    document.getElementById("playerScore").innerText = 0;
+    document.getElementById("playersCard").innerText = 0;
+    document.getElementById("bankScore").innerText = "?";
+    document.getElementById("winner").innerText = "";
+
 }
