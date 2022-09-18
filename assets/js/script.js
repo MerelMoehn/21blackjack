@@ -34,7 +34,6 @@ function runGame(selectedControl) {
             incrementPlayerScore(playerCard);
         } else {
             alert("Aii you should have stopped earlier, you lost!");
-            playBank(bankCard);
         }
     }
 
@@ -56,4 +55,16 @@ function playBank(bankCard) {
     }
     while (bankScore < 17);
     document.getElementById("bankScore").innerText = bankScore;
+    calculateWinner();
+}
+
+function calculateWinner() {
+let playersTotalScore = document.getElementById("playerScore").innerText;
+let computersTotalScore = document.getElementById("bankScore").innerText;
+
+if(playersTotalScore > computersTotalScore && playersTotalScore < 22){
+    document.getElementById("winner").innerText = "Congratulations! You are the winner!";
+} else {
+    document.getElementById("winner").innerText = "Ai, the computer won, you lost!";
+}
 }
