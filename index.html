@@ -20,13 +20,30 @@
 <body>
     <h1 class="heading">Twenty-one</h1>
 
+    <div id="intro-section">
+        <h2>Who is playing?</h2> 
+        <input id="name-box" type="text">
+        <button data-type="submit" class="btn--small">Submit</button>
+    </div>
+
     <div class="explanation-area">
         <h2>Game Explanation</h2>
-        <p>What's your name?</p> 
-        <input id="name-box" type="text">
-       <p>In this game you're going to try to win from the bank by coming as close as possible
+       <p>Hi <span id="userName"></span>,</p>
+        <p>In this game you're going to try to win from the bank by coming as close as possible
             to 21. If you go over 21, you lost. Only if you are under 21 but closer to 21 than the bank, you win! Be
-            smart, and don't be to cocky! Click, 'Hit Me!' to start the game. Good luck!</p>
+            smart, and don't be to cocky! Click, 'Hit Me!' to start the game.</p>
+            <p>Good luck!</p>
+    </div>
+
+    <div class="score-area">
+        <div class="player-scores scores">
+            <p>You got: <span id="playersCard">0</span> Your current total score = <span
+                    id="playerScore">0</span></p>
+        </div>
+        <div class="bank-scores scores">
+            <p>The bank got: <span id="bankScore">?</span></p>
+        </div>
+        <div id ="winner"></div>
     </div>
 
     <div class="controls-area">
@@ -34,17 +51,6 @@
         <button data-type="hold" class="btn btn--big btn--black">Hold!</button>
         <button data-type="reset" class="btn btn--big btn--grey">Reset</button>
 
-    </div>
-
-    <div class="score-area">
-        <div class="player-scores">
-            <p class="scores">You got: <span id="playersCard">0</span> Your current total score = <span
-                    id="playerScore">0</span></p>
-        </div>
-        <div class="bank-scores">
-            <p class="scores">The bank got: <span id="bankScore">?</span></p>
-        </div>
-        <div id ="winner"></div>
     </div>
 
     <script src="./assets/js/script.js"></script>

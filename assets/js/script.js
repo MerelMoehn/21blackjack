@@ -1,6 +1,5 @@
-//Wait for the DOM to finish laoding before running the game
+//Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
-
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 
@@ -12,17 +11,26 @@ document.addEventListener("DOMContentLoaded", function () {
                 runGame("hold");
             } else if (this.getAttribute("data-type") === "reset") {
                 reset();
+            } else if (this.getAttribute("data-type") === "submit") {
+                getName();
             } else {
-                alert("You did not select anything")
+                alert("Something went wrong, try again");
             }
         })
     }
 })
 
+function getName() {
+    let userName = document.getElementById("name-box").value;
+    document.getElementById("userName").innerText = userName;
+    return userName;
+}
+
 /**
  * the main game loop, which will start when the user clicks 'hit me!'
  */
 function runGame(selectedControl) {
+    let userName = getName();
 
     // creates two random numbers out of the possible cards/numbers of the 21 game
     let allCards = [1, 2, 3, 11, 7, 8, 9, 10, 11];
@@ -35,7 +43,7 @@ function runGame(selectedControl) {
             document.getElementById("playersCard").innerText = playerCard;
             incrementPlayerScore(playerCard);
         } else {
-            alert("Aii you should have stopped earlier, you lost!");
+            document.getElementById("winner").innerText = `Ai ${userName}, the computer won, you lost!`;
         }
     }
 
@@ -61,20 +69,20 @@ function playBank(bankCard) {
 }
 
 function calculateWinner() {
-let playersTotalScore = document.getElementById("playerScore").innerText;
-let computersTotalScore = document.getElementById("bankScore").innerText;
+    let userName = getName();
+    let playersTotalScore = document.getElementById("playerScore").innerText;
+    let computersTotalScore = document.getElementById("bankScore").innerText;
 
-if(playersTotalScore > computersTotalScore && playersTotalScore < 22){
-    document.getElementById("winner").innerText = "Congratulations! You are the winner!";
-} else {
-    document.getElementById("winner").innerText = "Ai, the computer won, you lost!";
-}
+    if (playersTotalScore > computersTotalScore && playersTotalScore < 22) {
+        document.getElementById("winner").innerText = `Congratulations ${userName}! You are the winner!`;
+    } else {
+        document.getElementById("winner").innerText = `Oh no ${userName}, the computer won, you lost!`;
+    }
 }
 
-function reset(){
+function reset() {
     document.getElementById("playerScore").innerText = 0;
     document.getElementById("playersCard").innerText = 0;
     document.getElementById("bankScore").innerText = "?";
     document.getElementById("winner").innerText = "";
-
 }

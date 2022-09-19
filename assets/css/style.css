@@ -14,14 +14,28 @@ body {
     font-family: "MS Madi", sans-serif;
 }
 
+/* --------- Who is the player section */
+#intro-section {
+    width: 85%;
+    margin: 30px auto;
+}
+
+/* --------- name submit box */
+#name-box{
+    height: 30px;
+    width: 100px;
+    font-family: "Poiret One", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+}
+
 /* --------- Explanation Area layout */
 .explanation-area {
     width: 85%;
     height: 65vh;
     max-height: 300px;
     max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
     padding: 1%;
 }
 
@@ -30,24 +44,34 @@ body {
     height: 65vh;
     max-height: 100px;
     max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
     padding: 1%;
 }
 
 .score-area {
-    background-color: #E6ECF0;
+    background-color: #023020;
+    color: #FFFFFF;
     box-sizing: border-box;
     width: 85%;
     height: 65vh;
     max-height: 150px;
     max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
     padding: 1%;
 }
 
 /* --------- Buttons */
+
+.btn--small {
+    width: 100px;
+    height: 40px;
+    font-family: "Poiret One", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    background-color: #023020;
+    color: #FFFFFF;
+}
 
 .btn {
     width: 220px;
@@ -57,7 +81,7 @@ body {
     font-weight: 300;
     font-size: 20px;
     letter-spacing: 1.2px;
-    color: black;
+    color: #000000;
 }
 
 .btn:focus {
@@ -65,7 +89,7 @@ body {
 }
 
 .btn--big {
-    background-color: white;
+    background-color: #FFFFFF;
     border: 5px solid;
     width: 100px;
     height: 75px;
@@ -74,30 +98,30 @@ body {
 }
 
 .btn--green {
-    border-color: green;
-    color: green;
+    border-color: #023020;
+    color: #023020;
 }
 
 .btn--green:hover {
-    background-color: green;
-    color: white;
+    background-color: #023020;
+    color: #FFFFFF;
 }
 
 .btn--black {
-    border-color: black;
-    color: black;
+    border-color: #000000;
+    color: #000000;
 }
 
 .btn--black:hover {
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
 .btn--grey {
-    border-color: grey;
+    border-color: #696868;
 }
 
 .btn--grey:hover {
-    background-color: grey;
-    color: white;
+    background-color: #696868;
+    color: #FFFFFF;
 }
