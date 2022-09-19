@@ -26,8 +26,15 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function getName() {
     let userName = document.getElementById("name-box").value;
+    if(userName === ""){
+        alert("Oeps! You did not enter a name. Try again!");
+    } else if(typeof userName === 'string') {
+        alert("Oeps! You did not enter text, probably a number or sign. Try again!");
+    }
+    else{
     document.getElementById("userName").innerText = userName;
     return userName;
+}
 }
 
 /**

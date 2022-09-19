@@ -60,9 +60,13 @@ The colors used for the website are black, white, green, and grey.
 ![Image of lighthouse performance](./assets/images/lighthouseperformance.png)
 
 The W3C Markup Validator and W3C CCS Validator Services, and JigSaw were used to validate every page of the project to ensure there were no syntax errors in the project.
--> Results CSS validator: the CSS passes through the validator without errors.
--> Results Markup Validator: the HTML passes through the validator without errors.
--> Results JSHint validator: the javaScript codes passes through the validator without errors.
+* Results CSS validator: the CSS passes through the validator without errors.
+* Results Markup Validator: the HTML passes through the validator without errors.
+* Results JSHint validator: the javaScript codes passes through the validator without errors. The following metrics were returned:
+There are 8 functions in this file.
+* Function with the largest signature take 1 arguments, while the median is 0.5.
+* Largest function has 17 statements in it, while the median is 4.5.
+* The most complex function has a cyclomatic complexity value of 6 while the median is 2.
 
 **Testing the User Stories from User Experience (UX) section**
 * As a user I want to play the online version of twenty-one to enjoy myself: when the user lands on the page it directly sees the logo (indicating that this website is about twenty-one). In addition, the user can scroll down and start the game by clicking the 'Hit me!' button. After that the user can decide to do another round or hold. After the user selects 'hold' the bank's total score is shown and the winner is presented. After that the user can reset the game.
@@ -75,6 +79,9 @@ The W3C Markup Validator and W3C CCS Validator Services, and JigSaw were used to
 * Incorrect outcome 2: In some occasions the site appointed the player as winner (while having a score of 9), while the computer had a score of 20. I could not see an error in my if statements. The error was appearing because of a timing issue. Instead of getting the bank's score from the DOM I now pass it from playBank() to Calculate() winner. That seems to have solved the error.
 * Hold when no card is played: the player was able to press hold while he did not play any card yet (click Hit Me), so I inserted an if statement and alert to ensure the player first plays and then holds.
 * HandleBar error: I got an error in my devtools telling me that I needed to pass a string or a Handlebars AST to Handlebars.compile. I did not use handlebars in my code but after deleting a browser extension the error was gone.
+
+**Unsolved bugs**
+As far as I could find there are no outstanding bugs.
 
 ## Deployment
 **GitHub Pages**
