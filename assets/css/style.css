@@ -130,13 +130,7 @@ li {
     border: 5px solid;
     margin: 0 30px;
     transition: all 0.5s;
-
 }
-
-.btn:focus {
-    outline: none;
-}
-
 
 .btn--green {
     border-color: #023020;
@@ -180,10 +174,4 @@ li {
     font-size: 15px;
     margin: 10px 10px;
 }
-
-/* .controls-area {
-    display: grid;
-    grid-auto-flow: row;
-} */
-
 }

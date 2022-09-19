@@ -66,7 +66,7 @@ The W3C Markup Validator and W3C CCS Validator Services, and JigSaw were used to
 There are 8 functions in this file.
 * Function with the largest signature take 1 arguments, while the median is 0.5.
 * Largest function has 17 statements in it, while the median is 4.5.
-* The most complex function has a cyclomatic complexity value of 6 while the median is 2.
+* The most complex function has a cyclomatic complexity value of 6 while the median is 2.5.
 
 **Testing the User Stories from User Experience (UX) section**
 * As a user I want to play the online version of twenty-one to enjoy myself: when the user lands on the page it directly sees the logo (indicating that this website is about twenty-one). In addition, the user can scroll down and start the game by clicking the 'Hit me!' button. After that the user can decide to do another round or hold. After the user selects 'hold' the bank's total score is shown and the winner is presented. After that the user can reset the game.

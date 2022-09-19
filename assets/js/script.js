@@ -49,6 +49,7 @@ function runGame(selectedControl) {
     let playerCard = allCards[Math.floor(Math.random() * allCards.length)];
     let bankCard = allCards[Math.floor(Math.random() * allCards.length)];
 
+    // if the user clicked 'hit me!' than this will run
     if (selectedControl === "hit") {
         if (playerScore < 21) {
             document.getElementById("playersCard").innerText = playerCard;
@@ -59,6 +60,7 @@ function runGame(selectedControl) {
         }
     }
 
+    // if the user clicked 'hold' than this will run
     if (selectedControl === "hold") {
         if (playerScore === 0) {
             alert("You have to start playing before you can hold");
