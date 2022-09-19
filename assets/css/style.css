@@ -18,9 +18,9 @@ body {
 /* --------- Who is the player section */
 #intro-section {
     background-color: #ececec;
-    width: 85%;
+    width: 90%;
     height: 150px;
-    max-width: 830px;
+    max-width: 950px;
     margin: auto;
     padding: 1%;
 }
@@ -36,9 +36,9 @@ body {
 
 /* --------- Explanation Area layout */
 .explanation-area {
-    width: 85%;
-    height: 375px;
-    max-width: 830px;
+    width: 90%;
+    height: auto;
+    max-width: 950px;
     margin: 0 auto;
     padding: 1%;
 }
@@ -52,9 +52,9 @@ li {
     background-color: #023020;
     color: #FFFFFF;
     box-sizing: border-box;
-    width: 85%;
+    width: 90%;
     height: 210px;
-    max-width: 830px;
+    max-width: 950px;
     margin: auto;
     padding: 1%;
 }
@@ -66,6 +66,7 @@ li {
 }
 
 .scores {
+    font-size: 120%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,12 +80,15 @@ li {
 
 /* --------- Controls Area */
 .controls-area {
-    width: 85%;
-    height: 65vh;
-    max-height: 100px;
-    max-width: 830px;
-    margin: 30px auto 60px auto;
+    width: 90%;
+    height: auto;
+    max-width: 950px;
+    margin: 30px auto;
     padding: 1%;
+    display: grid;
+    grid-auto-flow: column;
+
+    justify-content: center;
 }
 
 /* --------- Buttons */
@@ -100,28 +104,24 @@ li {
 }
 
 .btn {
-    width: 220px;
-    height: 60px;
+    width: 100px;
+    height: 75px;
     font-family: "Poiret One", sans-serif;
     text-transform: uppercase;
-    font-weight: 300;
     font-size: 20px;
     letter-spacing: 1.2px;
     color: #000000;
+    background-color: #FFFFFF;
+    border: 5px solid;
+    margin: 0 30px;
+    transition: all 0.5s;
+
 }
 
 .btn:focus {
     outline: none;
 }
 
-.btn--big {
-    background-color: #FFFFFF;
-    border: 5px solid;
-    width: 100px;
-    height: 75px;
-    margin: 0 30px;
-    transition: all 0.5s;
-}
 
 .btn--green {
     border-color: #023020;
@@ -150,4 +150,24 @@ li {
 .btn--grey:hover {
     background-color: #696868;
     color: #FFFFFF;
+}
+
+/* --------- media queries */
+/* for screen size from 400px wide and down  */
+@media screen and (max-width: 400px) {
+    .scores {
+        font-size: 100%;
+    }
+
+.btn {
+    width: 75px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.controls-area {
+    display: grid;
+    grid-auto-flow: row;
+}
+
 }
