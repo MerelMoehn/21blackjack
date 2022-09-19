@@ -48,9 +48,11 @@ function runGame(selectedControl) {
     }
 
     if (selectedControl === "hold") {
+        if (playerScore > 21){
+            document.getElementById("winner").innerText = `Ai ${userName}, the computer won, you lost!`;
+        }
         playBank(bankCard);
     }
-
 }
 
 function incrementPlayerScore(playerCard) {
@@ -71,9 +73,9 @@ function playBank(bankCard) {
 function calculateWinner() {
     let userName = getName();
     let playersTotalScore = document.getElementById("playerScore").innerText;
-    let computersTotalScore = document.getElementById("bankScore").innerText;
+    let banksTotalScore = document.getElementById("bankScore").innerText;
 
-    if (playersTotalScore > computersTotalScore && playersTotalScore < 22) {
+    if (playersTotalScore > banksTotalScore && playersTotalScore < 22 || banksTotalScore > 21) {
         document.getElementById("winner").innerText = `Congratulations ${userName}! You are the winner!`;
     } else {
         document.getElementById("winner").innerText = `Oh no ${userName}, the computer won, you lost!`;
