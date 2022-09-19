@@ -1,6 +1,7 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 #Twenty-One
+
 Welcome USER_NAME,
 
 In this document I will explain the approach and reason behind the website including an online game Twenty-One. The purpose of this website is let the user enjoy an online game called twenty-one. The goal of the game is to defeat the bank by coming as close to 21 as possible, and definately closer than the bank. However, the user has to be carefull not to be too confident and go over 21. Normally, this game is played with cards. That is why only the numbers: 1, 2, 3, 11, 7, 8, 9, 10, 11. are used. They represent the value of the cards that would be used in real-life. This website is responsive and thus can be accessed via desktop, tablet and mobile phone.
@@ -37,7 +38,7 @@ The colors used for the website are black, white, green, and grey.
 * Explanation section: the explanation section provides the user with the rules of the game.
 
 ![Image of the score dashboard](./assets/images/scoredashboard.png)
-* Score dashboard: this functionality shows the user his current card, his total score and at the end, the bank's total score.
+* Score dashboard: this functionality shows the user his current card, his total score, and at the end: the bank's total score.
 
 ![Image of control buttons](./assets/images/controlbuttons.png)
 * Control buttons: this functionality gives the user to interact with the game via three buttons: Hit me!, Hold! and, Reset.
@@ -63,19 +64,9 @@ The W3C Markup Validator and W3C CCS Validator Services, and JigSaw were used to
 -> Results Markup Validator: the HTML passes through the validator without errors.
 
 **Testing the User Stories from User Experience (UX) section**
-First time users
-* As a first time user I want to understand what this website is about: upon entering the site the user immediately sees the introduction text on the hero image introducing the topic.
-* As a first time user I want to be able to navigate through the site to see the different content: the user has the ability to use the navigation menu, scroll down, use the site map in the footer, or the call to action button.
-* As a first time user I want to be able to learn more about this website, its activities and goals by reviewing its social media: the user can access the social media accounts via the links in the footer.
-
-Returning users
-* As a returning user I want to gain more knowledge of the Metaverse at a basic level: the user is presented with a definition, introduction video, characteristics section and book suggestions to gain more knowledge about the Metaverse.
-* As a returning user I want to know how I can gain more knowledge about the Metaverse when leaving this website: the user is presented with a book selection which he can read after leaving the site, and a sign up page to get updates about additional information.
-* As a returning user I want to know how I can get in touch with the person behind this website to ask questions: the user can see the contact information of the website creator in the footer.
-
-Frequent users
-* As a frequent user I want to see if any new books are added to the website by either visiting the website or sign up for updates: the user can give his contact information on the sign up page to get additional information about newly released books.
-
+* As a user I want to play the online version of twenty-one to enjoy myself: when the user lands on the page it directly sees the logo (indicating that this website is about twenty-one). In addition, the user can scroll down and start the game by clicking the 'Hit me!' button. After that the user can decide to do another round or hold. After the user selects 'hold' the bank's total score is shown and the winner is presented. After that the user can reset the game.
+* As a user I want to understand how this game works to have to best chances to win: before the user arrives at the game area he is presented with an explanation section that describes the rules of the game.
+* As a user I want this experience to be as personal as possible so that it feels like a true game: the user can enter its name so that the page and game are personalized.
 
 **Bugs found and solved**
 * HTML validator: An error was found that I used an h2 in a label function. I removed the h2 out of the label and styled the label in CSS, with the same style rules as for an h2.
@@ -97,12 +88,6 @@ The project was deployed to GitHub Pages using the following steps:
 **Code**
 * Some of the styling is based on the examples of the Math Loves Project.
 * The code for generating a random number out of an array I got from StackOverflow.
-
-**Content**
-* The definition of the Metaverse is based on the Metaverse Wikipedia site
-
-**Media**
-* No images or media was used during this project
 
 **Acknowledgements**
 * I want to thank the tutors for guiding me 
