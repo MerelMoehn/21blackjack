@@ -62,6 +62,7 @@ The colors used for the website are black, white, green, and grey.
 The W3C Markup Validator and W3C CCS Validator Services, and JigSaw were used to validate every page of the project to ensure there were no syntax errors in the project.
 -> Results CSS validator: the CSS passes through the validator without errors.
 -> Results Markup Validator: the HTML passes through the validator without errors.
+-> Results JSHint validator: the javaScript codes passes through the validator without errors.
 
 **Testing the User Stories from User Experience (UX) section**
 * As a user I want to play the online version of twenty-one to enjoy myself: when the user lands on the page it directly sees the logo (indicating that this website is about twenty-one). In addition, the user can scroll down and start the game by clicking the 'Hit me!' button. After that the user can decide to do another round or hold. After the user selects 'hold' the bank's total score is shown and the winner is presented. After that the user can reset the game.

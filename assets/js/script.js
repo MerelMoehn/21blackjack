@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 alert("Something went wrong, try again");
             }
-        })
+        });
     }
-})
+});
 
 /**
  * This function gets the player's name from the DOM after the player has clicked "submit"
