@@ -54,7 +54,9 @@ body {
 }
 
 li {
-    text-align: left;
+    text-align: center;
+    list-style-type: none;
+    line-height: 1.4;
 }
 
 /* --------- Scores Area layout */

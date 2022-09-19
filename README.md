@@ -1,9 +1,9 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-#Milestone Project 1
+#Twenty-One
 Welcome USER_NAME,
 
-In this document I will explain the approach and reason behind the website called MetaMinded. The purpose of this website is to give the user an introduction of the Metaverse: a first glance of what it is, and can be. To accomplish this the website includes a definition, an introduction video, recommended books, and a sign up page to get an update whenever there is a new book available. The user in mind is someone that does not know anything about the Metaverse and start learning more about it. This website is responsive and thus can be accessed via desktop, tablet and mobile phone.
+In this document I will explain the approach and reason behind the website including an online game Twenty-One. The purpose of this website is let the user enjoy an online game called twenty-one. The goal of the game is to defeat the bank by coming as close to 21 as possible, and definately closer than the bank. However, the user has to be carefull not to be too confident and go over 21. Normally, this game is played with cards. That is why only the numbers: 1, 2, 3, 11, 7, 8, 9, 10, 11. are used. They represent the value of the cards that would be used in real-life. This website is responsive and thus can be accessed via desktop, tablet and mobile phone.
 
 ![Website shown on different screens](./assets/images/amIResponsive.png)
 
@@ -14,21 +14,11 @@ The live project can be viewed by clicking this link: https://merelmoehn.github.
 
 ## User Experience (UX)
 **User stories (first time, returning, frequent)**
-The user stories that are at the base of this website are devided into three categories:
+The user stories that are at the base of this website are as follows:
 
-First time users
-* As a first time user I want to understand what this website is about.
-* As a first time user I want to be able to navigate through the site to see the different content.
-* As a first time user I want to be able to learn more about this website, its activities and goals by reviewing its social media.
-
-Returning users
-* As a returning user I want to gain more knowledge of the Metaverse at a basic level.
-* As a returning user I want to know how I can gain more knowledge about the Metaverse when leaving this website.
-* As a returning user I want to know how I can get in touch with the person behind this website to ask questions.
-
-Frequent users
-* As a frequent user I want to see if any new books are added to the website by either visiting the website or sign up for updates.
-
+* As a user I want to play the online version of twenty-one
+* As a user I want to understand how this game works
+* As a user I want this experience to be as personal as possible
 
 **Design**
 The design of the website is kept minimalistic. Two areas are highlighted to attract the user's attention. That are the section to submit your name and the results area.
@@ -37,24 +27,20 @@ The colors used for the website are black, white, green, and grey.
 
 **Features**
 
-![Image of navigation functionality](assets/images/navigation.png)
-* Navigation: this functionality provides the user to navigate through the different site pages. The user gets feedback via underlining and italic font of the current active page.
+![Image of logo](./assets/images/logo.png)
+* Logo: this directly indicates to the user that this website is about twenty-one.
 
-![Image of introduction video](assets/images/introduction_video.png)
-* Introduction video: this functionality provides the user with a Youtube video that introduces the Metaverse and relevant aspects. The user is in control of the Youtube video.
+![Image of name submit option](./assets/images/usernamepersonalisation.png)
+* Name submit: this functionality gives the user the option to submit his or her name. This will personalize the page and game.
 
-![Image of characteristics section](assets/images/characteristics.png)
-* Characteristics: this functionality provides the user with an overview of the four most important aspects of the Metaverse.
+![Image of explanation section](./assets/images/explanationtwentyone.png)
+* Explanation section: the explanation section provides the user with the rules of the game.
 
-![Image of book library](assets/images/recommended_books.png)
-* Book library: this functionality provides the user with an overview of the recommended books to read when wanting to learn about the Metaverse.
+![Image of the score dashboard](./assets/images/scoredashboard.png)
+* Score dashboard: this functionality shows the user his current card, his total score and at the end, the bank's total score.
 
-![Image of sign up page](assets/images/signup_form.png)
-* Sign Up: this functionality gives the user the opportunity to enter his details so he or she can get email updates about new books.
-
-![Image of footer element](assets/images/Footer.png)
-* Contact Links / footer: this functionality gives the user the opportunity to get in contact with the site creator, visit the social media accounts and see the site map.
-
+![Image of control buttons](./assets/images/controlbuttons.png)
+* Control buttons: this functionality gives the user to interact with the game via three buttons: Hit me!, Hold! and, Reset.
 
 ## Technologies Used
 **Languages Used**
@@ -70,7 +56,7 @@ The colors used for the website are black, white, green, and grey.
 
 ## Testing
 **Validators**
-![Image of lighthouse performance](./assets/images/lighthouseperformance.pngassets/images/Footer.png)
+![Image of lighthouse performance](./assets/images/lighthouseperformance.png)
 
 The W3C Markup Validator and W3C CCS Validator Services, and JigSaw were used to validate every page of the project to ensure there were no syntax errors in the project.
 -> Results CSS validator: the CSS passes through the validator without errors.
