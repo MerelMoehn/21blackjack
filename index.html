@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An online version of the 21 (blackjack) game">
+    <meta name="keywords" content="Online game, blackjack, twenty-one">
 
     <!-- Google Fonts-->
     <style>
@@ -14,14 +16,14 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Document</title>
+    <title>Let's play 21!</title>
 </head>
 
 <body>
     <h1 class="heading">Twenty-one</h1>
 
     <div id="intro-section">
-        <h2>Who is playing?</h2>
+        <label for="name-box"><h2>Who is playing?</h2></label>
         <input id="name-box" type="text">
         <button data-type="submit" class="btn--small">Submit</button>
     </div>
@@ -57,9 +59,9 @@
     </div>
 
     <div class="controls-area">
-        <button data-type="hit" class="btn btn--green">Hit me!</button>
-        <button data-type="hold" class="btn btn--black">Hold!</button>
-        <button data-type="reset" class="btn btn--grey">Reset</button>
+        <button data-type="hit" class="btn btn--green" aria-label="Button to get a card and corresponding score">Hit me!</button>
+        <button data-type="hold" class="btn btn--black" aria-label="Button to hold">Hold!</button>
+        <button data-type="reset" class="btn btn--grey" aria-label="Button to reset all values">Reset</button>
 
     </div>
 

@@ -77,6 +77,9 @@ li {
     padding-top: 10%;
 }
 
+#winner {
+    font-size: 120%;
+}
 
 /* --------- Controls Area */
 .controls-area {
@@ -163,11 +166,12 @@ li {
     width: 75px;
     height: 50px;
     font-size: 15px;
+    margin: 10px 10px;
 }
 
-.controls-area {
+/* .controls-area {
     display: grid;
     grid-auto-flow: row;
-}
+} */
 
 }

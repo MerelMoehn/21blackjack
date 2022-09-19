@@ -47,7 +47,7 @@ function runGame(selectedControl) {
             document.getElementById("playersCard").innerText = playerCard;
             incrementPlayerScore(playerCard);
         } else {
-            document.getElementById("winner").innerHTML = `<h2>Ai ${userName}, the computer won, you lost!</h2>`;
+            document.getElementById("winner").innerText = `Ai ${userName}, the computer won, you lost!`;
             document.getElementById("winner").style.color = "red";
         }
     }
@@ -56,7 +56,7 @@ function runGame(selectedControl) {
         if (playerScore === 0) {
             alert("You have to start playing before you can hold");
         } else if (playerScore > 21) {
-            document.getElementById("winner").innerHTML = `<h2>Ai ${userName}, the computer won, you lost!</h2>`;
+            document.getElementById("winner").innerText = `Ai ${userName}, the computer won, you lost!`;
             document.getElementById("winner").style.color = "red";
         } else {
             playBank(bankCard);
@@ -96,10 +96,10 @@ function calculateWinner(bankScore) {
     let banksTotalScore = bankScore;
 
     if (playersTotalScore > banksTotalScore && playersTotalScore < 22 || banksTotalScore > 21) {
-        document.getElementById("winner").innerHTML = `<h2>Congratulations ${userName}! You are the winner!</h2>`;
+        document.getElementById("winner").innerText = `Congratulations ${userName}! You are the winner!`;
         document.getElementById("winner").style.color = "green";
     } else {
-        document.getElementById("winner").innerHTML = `<h2>Oh no ${userName}, the computer won, you lost!</h2>`;
+        document.getElementById("winner").innerText = `Oh no ${userName}, the computer won, you lost!`;
         document.getElementById("winner").style.color = "red";
     }
 }
