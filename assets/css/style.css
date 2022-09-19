@@ -50,14 +50,7 @@ body {
 #explanation-text p {
     line-height: 1.5;
 }
-.controls-area {
-    width: 85%;
-    height: 65vh;
-    max-height: 100px;
-    max-width: 830px;
-    margin: 30px auto;
-    padding: 1%;
-}
+
 
 /* --------- Scores Area layout */
 .score-area {
@@ -65,7 +58,7 @@ body {
     color: #FFFFFF;
     box-sizing: border-box;
     width: 85%;
-    height: 200px;
+    height: 210px;
     max-width: 830px;
     margin: 30px auto;
     padding: 1%;
@@ -84,7 +77,20 @@ body {
     justify-content: center;
 }
 
+.scores > span {
+    padding-top: 10%;
+}
 
+
+/* --------- Controls Area */
+.controls-area {
+    width: 85%;
+    height: 65vh;
+    max-height: 100px;
+    max-width: 830px;
+    margin: 30px auto;
+    padding: 1%;
+}
 
 /* --------- Buttons */
 

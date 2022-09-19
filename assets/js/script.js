@@ -31,27 +31,31 @@ function getName() {
  */
 function runGame(selectedControl) {
     let userName = getName();
-
+    let playerScore = parseInt(document.getElementById("playerScore").innerText);
     // creates two random numbers out of the possible cards/numbers of the 21 game
     let allCards = [1, 2, 3, 11, 7, 8, 9, 10, 11];
     let playerCard = allCards[Math.floor(Math.random() * allCards.length)];
     let bankCard = allCards[Math.floor(Math.random() * allCards.length)];
 
     if (selectedControl === "hit") {
-        let playerScore = parseInt(document.getElementById("playerScore").innerText);
         if (playerScore < 21) {
             document.getElementById("playersCard").innerText = playerCard;
             incrementPlayerScore(playerCard);
         } else {
-            document.getElementById("winner").innerText = `Ai ${userName}, the computer won, you lost!`;
+            document.getElementById("winner").innerHTML = `<h2>Ai ${userName}, the computer won, you lost!</h2>`;
+            document.getElementById("winner").style.color = "red";
         }
     }
 
     if (selectedControl === "hold") {
-        if (playerScore > 21){
-            document.getElementById("winner").innerHTML = `<h3>Ai ${userName}, the computer won, you lost!</h3>`;
-        }
+        if(playerScore === 0){
+            alert("You have to start playing before you can hold");
+        } else if (playerScore > 21){
+            document.getElementById("winner").innerHTML = `<h2>Ai ${userName}, the computer won, you lost!</h2>`;
+            document.getElementById("winner").style.color = "red";
+        } else {
         playBank(bankCard);
+        }
     }
 }
 
@@ -76,9 +80,11 @@ function calculateWinner() {
     let banksTotalScore = document.getElementById("bankScore").innerText;
 
     if (playersTotalScore > banksTotalScore && playersTotalScore < 22 || banksTotalScore > 21) {
-        document.getElementById("winner").innerHTML = `<h3>Congratulations ${userName}! You are the winner!</h3>`;
+        document.getElementById("winner").innerHTML = `<h2>Congratulations ${userName}! You are the winner!</h2>`;
+        document.getElementById("winner").style.color = "green";
     } else {
-        document.getElementById("winner").innerHTML = `<h3>Oh no ${userName}, the computer won, you lost!</h3>`;
+        document.getElementById("winner").innerHTML = `<h2>Oh no ${userName}, the computer won, you lost!</h2>`;
+        document.getElementById("winner").style.color = "red";
     }
 }
 
