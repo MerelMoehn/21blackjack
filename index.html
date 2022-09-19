@@ -21,27 +21,29 @@
     <h1 class="heading">Twenty-one</h1>
 
     <div id="intro-section">
-        <h2>Who is playing?</h2> 
+        <h2>Who is playing?</h2>
         <input id="name-box" type="text">
         <button data-type="submit" class="btn--small">Submit</button>
     </div>
 
     <div class="explanation-area">
-        <h2>Game Explanation</h2>
-       <p>Hi <span id="userName"></span>,</p>
-        <p>In this game you're going to try to win from the bank by coming as close as possible
-            to 21. If you go over 21, you lost. Only if you are under 21 but closer to 21 than the bank, you win! Be
-            smart, and don't be to cocky! Click, 'Hit Me!' to start the game.</p>
-            <p>Good luck!</p>
+        <div id="explanation-text">
+            <h2>Game Explanation</h2>
+            <p>Hi <span id="userName"></span>,</p>
+            <p>This game is a simulation of the 21 game. When clicking 'Hit me!' you will get a card. This card can have
+                the value of: 1, 2, 3, 11, 7, 8, 9, 10, 11. If you go over 21, you lost. You win when 1) your score 21
+                and the bank's score is either lower or higher, or 2) your score is less than 21 but closer than 21 than
+                the bank's score . Be smart, and don't be too cocky! Click, 'Hit Me!' to start the game. Good luck!</p>
+        </div>
     </div>
 
     <div class="score-area">
         <div id="score-overview">
-            <p class="scores">You got: <span id="playersCard">0</span></p>
-            <p class="scores">Your current total score = <span id="playerScore">0</span></p>
-            <p class="scores">The bank got: <span id="bankScore">?</span></p>
+            <h3 class="scores">You got: <span id="playersCard">0</span></h3>
+            <h3 class="scores">Your current total score = <span id="playerScore">0</span></h3>
+            <h3 class="scores">The bank got: <span id="bankScore">?</span></h3>
         </div>
-        <div id ="winner"></div>
+        <div id="winner"></div>
     </div>
 
     <div class="controls-area">
