@@ -17,21 +17,17 @@ body {
 
 /* --------- Who is the player section */
 #intro-section {
-    background-color: #696868;
+    background-color: #ececec;
     width: 85%;
     height: 150px;
     max-width: 830px;
-    margin: 30px auto;
+    margin: auto;
     padding: 1%;
-}
-
-#intro-section h2 {
-    color: #FFFFFF;
 }
 
 /* --------- name submit box */
 #name-box {
-    height: 30px;
+    height: 25px;
     width: 100px;
     font-family: "Poiret One", sans-serif;
     font-size: 20px;
@@ -41,16 +37,15 @@ body {
 /* --------- Explanation Area layout */
 .explanation-area {
     width: 85%;
-    height: 300px;
+    height: 375px;
     max-width: 830px;
-    margin: 30px auto;
+    margin: 0 auto;
     padding: 1%;
 }
 
-#explanation-text p {
-    line-height: 1.5;
+li {
+    text-align: left;
 }
-
 
 /* --------- Scores Area layout */
 .score-area {
@@ -60,7 +55,7 @@ body {
     width: 85%;
     height: 210px;
     max-width: 830px;
-    margin: 30px auto;
+    margin: auto;
     padding: 1%;
 }
 
@@ -88,7 +83,7 @@ body {
     height: 65vh;
     max-height: 100px;
     max-width: 830px;
-    margin: 30px auto;
+    margin: 30px auto 60px auto;
     padding: 1%;
 }
 
@@ -96,9 +91,8 @@ body {
 
 .btn--small {
     width: 100px;
-    height: 40px;
+    height: 30px;
     font-family: "Poiret One", sans-serif;
-    text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 1.4px;
     background-color: #023020;

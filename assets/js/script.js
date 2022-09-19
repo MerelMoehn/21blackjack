@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 })
 
+/**
+ * This function gets the player's name from the DOM after the player has clicked "submit"
+ * It uses the name to personalize the site and winner's message.
+ */
 function getName() {
     let userName = document.getElementById("name-box").value;
     document.getElementById("userName").innerText = userName;
@@ -32,6 +36,7 @@ function getName() {
 function runGame(selectedControl) {
     let userName = getName();
     let playerScore = parseInt(document.getElementById("playerScore").innerText);
+
     // creates two random numbers out of the possible cards/numbers of the 21 game
     let allCards = [1, 2, 3, 11, 7, 8, 9, 10, 11];
     let playerCard = allCards[Math.floor(Math.random() * allCards.length)];
@@ -48,22 +53,29 @@ function runGame(selectedControl) {
     }
 
     if (selectedControl === "hold") {
-        if(playerScore === 0){
+        if (playerScore === 0) {
             alert("You have to start playing before you can hold");
-        } else if (playerScore > 21){
+        } else if (playerScore > 21) {
             document.getElementById("winner").innerHTML = `<h2>Ai ${userName}, the computer won, you lost!</h2>`;
             document.getElementById("winner").style.color = "red";
         } else {
-        playBank(bankCard);
+            playBank(bankCard);
         }
     }
 }
 
+/**
+ * This functions increments the player's score by getting the current score from the DOM and adding the random selected card value to it. 
+ * Which is passed as parameter (playerCard)
+ */
 function incrementPlayerScore(playerCard) {
     let oldScore = parseInt(document.getElementById("playerScore").innerText);
     document.getElementById("playerScore").innerText = oldScore + playerCard;
 }
 
+/**
+ * This functions runs the bank's game after the user has clicked on hold. The bank will take a card as long as its total score is below 17. When higher than 17 the bank holds.
+ */
 function playBank(bankCard) {
     let bankScore = 0;
     do {
@@ -71,13 +83,17 @@ function playBank(bankCard) {
     }
     while (bankScore < 17);
     document.getElementById("bankScore").innerText = bankScore;
-    calculateWinner();
+    calculateWinner(bankScore);
 }
 
-function calculateWinner() {
+/**
+ * Calculates the winner of the game by comparing the bank's score to player's score
+ * It takes the paramater bankScore and gets the player's score from the DOM.
+ */
+function calculateWinner(bankScore) {
     let userName = getName();
     let playersTotalScore = document.getElementById("playerScore").innerText;
-    let banksTotalScore = document.getElementById("bankScore").innerText;
+    let banksTotalScore = bankScore;
 
     if (playersTotalScore > banksTotalScore && playersTotalScore < 22 || banksTotalScore > 21) {
         document.getElementById("winner").innerHTML = `<h2>Congratulations ${userName}! You are the winner!</h2>`;
@@ -88,6 +104,10 @@ function calculateWinner() {
     }
 }
 
+/** 
+ * This function resets the game by setting players' values back to zero and setting the bank's score back to "?""
+ * It also removes the display of the winner.
+ */
 function reset() {
     document.getElementById("playerScore").innerText = 0;
     document.getElementById("playersCard").innerText = 0;
