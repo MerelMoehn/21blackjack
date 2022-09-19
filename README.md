@@ -1,108 +1,128 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome MerelMoehn,
+#Milestone Project 1
+Welcome USER_NAME,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+In this document I will explain the approach and reason behind the website called MetaMinded. The purpose of this website is to give the user an introduction of the Metaverse: a first glance of what it is, and can be. To accomplish this the website includes a definition, an introduction video, recommended books, and a sign up page to get an update whenever there is a new book available. The user in mind is someone that does not know anything about the Metaverse and start learning more about it. This website is responsive and thus can be accessed via desktop, tablet and mobile phone.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Website shown on different screens](./assets/images/amIResponsive.png)
 
-## Gitpod Reminders
+The last update to this file was: **September 22, 2022**
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Pictures and live link
+The live project can be viewed by clicking this link: https://merelmoehn.github.io/21game/
 
-`python3 -m http.server`
+## User Experience (UX)
+**User stories (first time, returning, frequent)**
+The user stories that are at the base of this website are devided into three categories:
 
-A blue button should appear to click: _Make Public_,
+First time users
+* As a first time user I want to understand what this website is about.
+* As a first time user I want to be able to navigate through the site to see the different content.
+* As a first time user I want to be able to learn more about this website, its activities and goals by reviewing its social media.
 
-Another blue button should appear to click: _Open Browser_.
+Returning users
+* As a returning user I want to gain more knowledge of the Metaverse at a basic level.
+* As a returning user I want to know how I can gain more knowledge about the Metaverse when leaving this website.
+* As a returning user I want to know how I can get in touch with the person behind this website to ask questions.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Frequent users
+* As a frequent user I want to see if any new books are added to the website by either visiting the website or sign up for updates.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+**Design**
+The design of the website is kept minimalistic. Two areas are highlighted to attract the user's attention. That are the section to submit your name and the results area.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The colors used for the website are black, white, green, and grey.
 
-To log into the Heroku toolbelt CLI:
+**Features**
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Image of navigation functionality](assets/images/navigation.png)
+* Navigation: this functionality provides the user to navigate through the different site pages. The user gets feedback via underlining and italic font of the current active page.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![Image of introduction video](assets/images/introduction_video.png)
+* Introduction video: this functionality provides the user with a Youtube video that introduces the Metaverse and relevant aspects. The user is in control of the Youtube video.
 
-------
+![Image of characteristics section](assets/images/characteristics.png)
+* Characteristics: this functionality provides the user with an overview of the four most important aspects of the Metaverse.
 
-## Release History
+![Image of book library](assets/images/recommended_books.png)
+* Book library: this functionality provides the user with an overview of the recommended books to read when wanting to learn about the Metaverse.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![Image of sign up page](assets/images/signup_form.png)
+* Sign Up: this functionality gives the user the opportunity to enter his details so he or she can get email updates about new books.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+![Image of footer element](assets/images/Footer.png)
+* Contact Links / footer: this functionality gives the user the opportunity to get in contact with the site creator, visit the social media accounts and see the site map.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Technologies Used
+**Languages Used**
+* HTML5
+* CSS
+* JavaScript
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Frameworks, Libraries & Programs Used
+* Hover.css: I used hover to give the user feedback when hovering over the menu items and buttons.
+* Google Fonts: I used Google Fonts to include two types of fonts: Playfair Display and Sources Sans Pro.
+* Git: I used Git for the version control of my code.
+* GitHub: I used GitHub for managing my repositories.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Testing
+**Validators**
+![Image of lighthouse performance](./assets/images/lighthouseperformance.pngassets/images/Footer.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+The W3C Markup Validator and W3C CCS Validator Services, and JigSaw were used to validate every page of the project to ensure there were no syntax errors in the project.
+-> Results CSS validator: the CSS passes through the validator without errors.
+-> Results Markup Validator: the HTML passes through the validator without errors.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+**Testing the User Stories from User Experience (UX) section**
+First time users
+* As a first time user I want to understand what this website is about: upon entering the site the user immediately sees the introduction text on the hero image introducing the topic.
+* As a first time user I want to be able to navigate through the site to see the different content: the user has the ability to use the navigation menu, scroll down, use the site map in the footer, or the call to action button.
+* As a first time user I want to be able to learn more about this website, its activities and goals by reviewing its social media: the user can access the social media accounts via the links in the footer.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Returning users
+* As a returning user I want to gain more knowledge of the Metaverse at a basic level: the user is presented with a definition, introduction video, characteristics section and book suggestions to gain more knowledge about the Metaverse.
+* As a returning user I want to know how I can gain more knowledge about the Metaverse when leaving this website: the user is presented with a book selection which he can read after leaving the site, and a sign up page to get updates about additional information.
+* As a returning user I want to know how I can get in touch with the person behind this website to ask questions: the user can see the contact information of the website creator in the footer.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Frequent users
+* As a frequent user I want to see if any new books are added to the website by either visiting the website or sign up for updates: the user can give his contact information on the sign up page to get additional information about newly released books.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+**Bugs found and solved**
+* HTML validator: An error was found that I used an h2 in a label function. I removed the h2 out of the label and styled the label in CSS, with the same style rules as for an h2.
+* Incorrect outcome 1: after testing my game for the first time I discovered that not always the correct outcome was shown. I added the statement (|| banksTotalScore > 21) in the calculateWinner function to ensure the player wins in the correct situations.
+* Incorrect outcome 2: In some occasions the site appointed the player as winner (while having a score of 9), while the computer had a score of 20. I could not see an error in my if statements. The error was appearing because of a timing issue. Instead of getting the bank's score from the DOM I now pass it from playBank() to Calculate() winner. That seems to have solved the error.
+* Hold when no card is played: the player was able to press hold while he did not play any card yet (click Hit Me), so I inserted an if statement and alert to ensure the player first plays and then holds.
+* HandleBar error: I got an error in my devtools telling me that I needed to pass a string or a Handlebars AST to Handlebars.compile. I did not use handlebars in my code but after deleting a browser extension the error was gone.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Deployment
+**GitHub Pages**
+The project was deployed to GitHub Pages using the following steps:
+1. I pushed my final code via the terminal after finishing the project.
+2. I navigated on GitHub to 'Settings'
+3. After Settings I navigated to GitHub Pages
+4. There I selected 'Deploy from Branch'
+5. Then I selected 'Main/(root)' branch
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Credits
+**Code**
+* Some of the styling is based on the examples of the Math Loves Project.
+* The code for generating a random number out of an array I got from StackOverflow.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**Content**
+* The definition of the Metaverse is based on the Metaverse Wikipedia site
 
-------
+**Media**
+* No images or media was used during this project
 
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
+**Acknowledgements**
+* I want to thank the tutors for guiding me 
+* I thank my mentor for his review and feedback on my project
+* I thank my fellow students for providing me with suggestions via Slack
+* I want to CodeInstitute for the modules that made me capable of writing this code
 ---
 
-Happy coding!
+Thank you!
