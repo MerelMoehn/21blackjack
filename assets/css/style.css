@@ -1,5 +1,5 @@
 /* --------- Global style */
-*{
+* {
     margin: 0;
 }
 
@@ -56,7 +56,7 @@ body {
     padding: 1%;
 }
 
-.explanation-area > h2 {
+.explanation-area>h2 {
     margin-bottom: 20px;
 }
 
@@ -76,13 +76,13 @@ li {
     color: #FFFFFF;
     box-sizing: border-box;
     width: 90%;
-    height: 210px;
+    height: 150px;
     max-width: 950px;
     margin: 20px auto;
     padding: 1%;
 }
 
-#score-overview{
+#score-overview {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 3fr;
@@ -96,12 +96,13 @@ li {
     justify-content: center;
 }
 
-.scores > span {
+.scores>span {
     padding-top: 10%;
 }
 
 #winner {
     font-size: 120%;
+    margin: 10px 0;
 }
 
 /* --------- Controls Area */
@@ -173,16 +174,24 @@ li {
 }
 
 /* --------- media queries */
-/* for screen size from  wide and up  */
-/* @media screen and (min-width: 450px) {
-    .scores {
-        font-size: 120%;
+/* for screen size from 500px wide and up */  
+@media screen and (min-width: 500px) {
+    .btn {
+        width: 100px;
+        height: 75px;
+        font-size: 20px;
+        margin: 0 30px;
     }
 
-.btn {
- width: 100px;
-height: 75px;
-font-size: 20px;
-margin: 0 30px;
+    @media screen and (min-width: 500px) {
+        .scores {
+            font-size: 120%;
+        }
 }
-} */
+
+@media screen and (min-width: 800px) {
+    .score-area {
+        height: 200px;
+    }
+}
+}
