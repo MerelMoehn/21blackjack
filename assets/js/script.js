@@ -54,6 +54,7 @@ function runGame(selectedControl) {
         } else {
             document.getElementById("winner").innerText = `Ai ${userName}, the computer won, you lost!`;
             document.getElementById("winner").style.color = "red";
+            document.getElementById("smiley").className = "fa-regular fa-face-sad-cry";
         }
     }
 
@@ -64,6 +65,7 @@ function runGame(selectedControl) {
         } else if (playerScore > 21) {
             document.getElementById("winner").innerText = `Ai ${userName}, the computer won, you lost!`;
             document.getElementById("winner").style.color = "red";
+            document.getElementById("smiley").className = "fa-regular fa-face-sad-cry";
         } else {
             playBank(bankCard);
         }
@@ -107,6 +109,7 @@ function calculateWinner(bankScore) {
     } else {
         document.getElementById("winner").innerText = `Oh no ${userName}, the computer won, you lost!`;
         document.getElementById("winner").style.color = "red";
+        document.getElementById("smiley").className = "fa-regular fa-face-sad-cry";
     }
 }
 
@@ -119,4 +122,5 @@ function reset() {
     document.getElementById("playersCard").innerText = 0;
     document.getElementById("bankScore").innerText = "?";
     document.getElementById("winner").innerText = "";
+    document.getElementById("smiley").className = "fa-regular fa-face-laugh-beam";
 }
