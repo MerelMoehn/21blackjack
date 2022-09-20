@@ -1,4 +1,7 @@
 /* --------- Global style */
+*{
+    margin: 0;
+}
 
 body {
     font-family: "Poiret One", sans-serif;
@@ -49,14 +52,22 @@ body {
     width: 90%;
     height: auto;
     max-width: 950px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 1%;
+}
+
+.explanation-area > h2 {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-inline-start: 0;
 }
 
 li {
     text-align: center;
     list-style-type: none;
-    line-height: 1.4;
+    line-height: 2;
 }
 
 /* --------- Scores Area layout */
@@ -67,7 +78,7 @@ li {
     width: 90%;
     height: 210px;
     max-width: 950px;
-    margin: auto;
+    margin: 20px auto;
     padding: 1%;
 }
 
@@ -78,7 +89,7 @@ li {
 }
 
 .scores {
-    font-size: 120%;
+    font-size: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,16 +130,16 @@ li {
 }
 
 .btn {
-    width: 100px;
-    height: 75px;
+    width: 75px;
+    height: 50px;
     font-family: "Poiret One", sans-serif;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 15px;
     letter-spacing: 1.2px;
     color: #000000;
     background-color: #FFFFFF;
     border: 5px solid;
-    margin: 0 30px;
+    margin: 10px;
     transition: all 0.5s;
 }
 
@@ -162,16 +173,16 @@ li {
 }
 
 /* --------- media queries */
-/* for screen size from 400px wide and down  */
-@media screen and (max-width: 400px) {
+/* for screen size from  wide and up  */
+/* @media screen and (min-width: 450px) {
     .scores {
-        font-size: 100%;
+        font-size: 120%;
     }
 
 .btn {
-    width: 75px;
-    height: 50px;
-    font-size: 15px;
-    margin: 10px 10px;
+ width: 100px;
+height: 75px;
+font-size: 20px;
+margin: 0 30px;
 }
-}
+} */
