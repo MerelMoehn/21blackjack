@@ -38,7 +38,8 @@ The colors used for the website are black, white, green, and grey.
 * Explanation section: the explanation section provides the user with the rules of the game.
 
 ![Image of the score dashboard](./assets/images/scoredashboard.png)
-* Score dashboard: this functionality shows the user his current card, his total score, and at the end: the bank's total score.
+![Image of a sad smiley when player lost](./assets/images/sadsmiley_playerlost.png)
+* Score dashboard: this functionality shows the user his current card, his total score, and at the end: the bank's total score. The smiley will change from happy to sad when the player has lost. It will change back to smiling when the player resets the game.
 
 ![Image of control buttons](./assets/images/controlbuttons.png)
 * Control buttons: this functionality gives the user to interact with the game via three buttons: Hit me!, Hold! and, Reset.
