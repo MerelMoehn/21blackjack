@@ -71,6 +71,12 @@ li {
 }
 
 /* --------- Scores Area layout */
+
+i {
+    font-size: 120%;
+    margin: 5px 0;
+}
+
 .score-area {
     background-color: #023020;
     color: #FFFFFF;
@@ -193,5 +199,11 @@ li {
     .score-area {
         height: 200px;
     }
+}
+
+@media screen and (min-width: 1000px) {   
+}
+i {
+    font-size: 150%;
 }
 }
