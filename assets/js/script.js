@@ -49,8 +49,8 @@ function runGame(selectedControl) {
 
     // if the user clicked 'hit me!' than this will run
     if (selectedControl === "hit") {
-        if (document.getElementById("winner").textContent !== " "){  
-            alert("Reset the game"); 
+        if (document.getElementById("winner").textContent !== " ") {
+            alert("Please reset the game.");
         } else if (playerScore < 21) {
             document.getElementById("playersCard").innerText = playerCard;
             incrementPlayerScore(playerCard);
@@ -67,8 +67,8 @@ function runGame(selectedControl) {
     if (selectedControl === "hold") {
         if (playerScore === 0) {
             alert("You have to start playing before you can hold");
-        } else if (document.getElementById("winner").textContent !== " "){  
-                alert("Reset the game"); 
+        } else if (document.getElementById("winner").textContent !== " ") {
+            alert("Please reset the game.");
         } else if (playerScore > 21) {
             document.getElementById("winner").innerText = `Ai ${userName}, the bank won, you lost!`;
             document.getElementById("winner").style.color = "red";
@@ -103,7 +103,7 @@ function playBank(bankCard, playerStatus) {
 
     if (playerStatus === "neutral") {
         calculateWinner(bankScore);
-    };
+    }
 }
 
 /**
