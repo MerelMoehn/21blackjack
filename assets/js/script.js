@@ -101,6 +101,9 @@ function playBank(bankCard, playerStatus) {
     while (bankScore < 17);
     document.getElementById("bankScore").innerText = bankScore;
 
+    if (bankScore > 21){
+        document.getElementById("bankScore").style.color = "red";
+    }
     if (playerStatus === "neutral") {
         calculateWinner(bankScore);
     }
@@ -135,5 +138,5 @@ function reset() {
     document.getElementById("bankScore").innerText = "?";
     document.getElementById("winner").innerText = " ";
     document.getElementById("smiley").className = "fa-regular fa-face-laugh-beam";
-
+    document.getElementById("bankScore").style.color = "white";
 }
