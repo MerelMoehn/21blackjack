@@ -55,7 +55,9 @@ function runGame(selectedControl) {
 
     // if the user clicked 'hit me!' than this will run
     if (selectedControl === "hit") {
-        if (document.getElementById("winner").textContent !== " ") {
+        if (userName === ""){
+        alert("Please enter a name first");
+        } else if (document.getElementById("winner").textContent !== " ") {
             alert("Please reset the game.");
         } else if (playerScore < 21) {
             document.getElementById("playersCard").innerText = playerCard;
