@@ -65,6 +65,8 @@ function runGame(selectedControl) {
     if (selectedControl === "hold") {
         if (playerScore === 0) {
             alert("You have to start playing before you can hold");
+        } else if (document.getElementById("winner") != "")  {
+            alert("Please reset the game for another round!");
         } else if (playerScore > 21) {
             document.getElementById("winner").innerText = `Ai ${userName}, the bank won, you lost!`;
             document.getElementById("winner").style.color = "red";
