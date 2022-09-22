@@ -71,7 +71,6 @@ li {
 }
 
 /* --------- Scores Area layout */
-
 i {
     font-size: 120%;
     margin: 5px 0;
@@ -125,8 +124,7 @@ i {
 }
 
 /* --------- Buttons */
-
-.btn--small {
+.btn-small {
     width: 100px;
     height: 30px;
     font-family: "Poiret One", sans-serif;
@@ -150,31 +148,31 @@ i {
     transition: all 0.5s;
 }
 
-.btn--green {
+.btn-green {
     border-color: #023020;
     color: #023020;
 }
 
-.btn--green:hover {
+.btn-green:hover {
     background-color: #023020;
     color: #FFFFFF;
 }
 
-.btn--black {
+.btn-black {
     border-color: #000000;
     color: #000000;
 }
 
-.btn--black:hover {
+.btn-black:hover {
     background-color: #000000;
     color: #FFFFFF;
 }
 
-.btn--grey {
+.btn-grey {
     border-color: #696868;
 }
 
-.btn--grey:hover {
+.btn-grey:hover {
     background-color: #696868;
     color: #FFFFFF;
 }
