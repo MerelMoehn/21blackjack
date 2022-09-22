@@ -49,7 +49,9 @@ function runGame(selectedControl) {
 
     // if the user clicked 'hit me!' than this will run
     if (selectedControl === "hit") {
-        if (playerScore < 21) {
+        if (document.getElementById("winner").textContent !== " "){  
+            alert("Reset the game"); 
+        } else if (playerScore < 21) {
             document.getElementById("playersCard").innerText = playerCard;
             incrementPlayerScore(playerCard);
         } else {
@@ -65,8 +67,8 @@ function runGame(selectedControl) {
     if (selectedControl === "hold") {
         if (playerScore === 0) {
             alert("You have to start playing before you can hold");
-        } else if (document.getElementById("winner") != "")  {
-            alert("Please reset the game for another round!");
+        } else if (document.getElementById("winner").textContent !== " "){  
+                alert("Reset the game"); 
         } else if (playerScore > 21) {
             document.getElementById("winner").innerText = `Ai ${userName}, the bank won, you lost!`;
             document.getElementById("winner").style.color = "red";
@@ -131,6 +133,7 @@ function reset() {
     document.getElementById("playerScore").innerText = 0;
     document.getElementById("playersCard").innerText = 0;
     document.getElementById("bankScore").innerText = "?";
-    document.getElementById("winner").innerText = "";
+    document.getElementById("winner").innerText = " ";
     document.getElementById("smiley").className = "fa-regular fa-face-laugh-beam";
+
 }
