@@ -26,12 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function getName() {
     let userName = document.getElementById("name-box").value;
-    if(typeof userName !== 'string') {
+    if (typeof userName !== 'string') {
         alert("Oeps! You did not enter text, probably a number or sign. Try again!");
-    } else{
-    document.getElementById("userName").innerText = userName;
-    return userName;
-}
+    } else {
+        document.getElementById("userName").innerText = userName;
+        return userName;
+    }
 }
 
 /**
@@ -40,6 +40,7 @@ function getName() {
 function runGame(selectedControl) {
     let userName = getName();
     let playerScore = parseInt(document.getElementById("playerScore").innerText);
+    let playerStatus = "neutral";
 
     // creates two random numbers out of the possible cards/numbers of the 21 game
     let allCards = [1, 2, 3, 11, 7, 8, 9, 10, 11];
@@ -52,9 +53,11 @@ function runGame(selectedControl) {
             document.getElementById("playersCard").innerText = playerCard;
             incrementPlayerScore(playerCard);
         } else {
-            document.getElementById("winner").innerText = `Ai ${userName}, the computer won, you lost!`;
+            document.getElementById("winner").innerText = `Ai ${userName}, you should have stopped earlier. You lost!`;
             document.getElementById("winner").style.color = "red";
             document.getElementById("smiley").className = "fa-regular fa-face-sad-cry";
+            playerStatus = "loser";
+            playBank(bankCard, playerStatus);
         }
     }
 
@@ -63,11 +66,13 @@ function runGame(selectedControl) {
         if (playerScore === 0) {
             alert("You have to start playing before you can hold");
         } else if (playerScore > 21) {
-            document.getElementById("winner").innerText = `Ai ${userName}, the computer won, you lost!`;
+            document.getElementById("winner").innerText = `Ai ${userName}, the bank won, you lost!`;
             document.getElementById("winner").style.color = "red";
             document.getElementById("smiley").className = "fa-regular fa-face-sad-cry";
+            playerStatus = "loser";
+            playBank(bankCard, playerStatus);
         } else {
-            playBank(bankCard);
+            playBank(bankCard, playerStatus);
         }
     }
 }
@@ -84,14 +89,17 @@ function incrementPlayerScore(playerCard) {
 /**
  * This functions runs the bank's game after the user has clicked on hold. The bank will take a card as long as its total score is below 17. When higher than 17 the bank holds.
  */
-function playBank(bankCard) {
+function playBank(bankCard, playerStatus) {
     let bankScore = 0;
     do {
         bankScore = bankScore + bankCard;
     }
     while (bankScore < 17);
     document.getElementById("bankScore").innerText = bankScore;
-    calculateWinner(bankScore);
+
+    if (playerStatus === "neutral") {
+        calculateWinner(bankScore);
+    };
 }
 
 /**
@@ -107,7 +115,7 @@ function calculateWinner(bankScore) {
         document.getElementById("winner").innerText = `Congratulations ${userName}! You are the winner!`;
         document.getElementById("winner").style.color = "green";
     } else {
-        document.getElementById("winner").innerText = `Oh no ${userName}, the computer won, you lost!`;
+        document.getElementById("winner").innerText = `Oh no ${userName}, the bank won, you lost!`;
         document.getElementById("winner").style.color = "red";
         document.getElementById("smiley").className = "fa-regular fa-face-sad-cry";
     }

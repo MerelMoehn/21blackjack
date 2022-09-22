@@ -189,10 +189,9 @@ i {
         margin: 0 30px;
     }
 
-    @media screen and (min-width: 500px) {
-        .scores {
-            font-size: 120%;
-        }
+    .scores {
+        font-size: 120%;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -202,8 +201,7 @@ i {
 }
 
 @media screen and (min-width: 1000px) {   
-}
-i {
-    font-size: 150%;
-}
+    i {
+        font-size: 150%;
+    }
 }
