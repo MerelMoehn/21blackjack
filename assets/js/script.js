@@ -18,6 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    document.getElementById("name-box").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            getName();
+        }
+    });
 });
 
 /**
