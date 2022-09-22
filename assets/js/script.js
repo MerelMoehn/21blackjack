@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    document.getElementById("name-box").addEventListener("keydown", function(event) {
+    // code based on Love Maths project
+    document.getElementById("name-box").addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
             getName();
         }
@@ -49,14 +50,15 @@ function runGame(selectedControl) {
     let playerStatus = "neutral";
 
     // creates two random numbers out of the possible cards/numbers of the 21 game
+    // code from StackOverflow
     let allCards = [1, 2, 3, 11, 7, 8, 9, 10, 11];
     let playerCard = allCards[Math.floor(Math.random() * allCards.length)];
     let bankCard = allCards[Math.floor(Math.random() * allCards.length)];
 
     // if the user clicked 'hit me!' than this will run
     if (selectedControl === "hit") {
-        if (userName === ""){
-        alert("Please enter a name first");
+        if (userName === "") {
+            alert("Please enter a name first");
         } else if (document.getElementById("winner").textContent !== " ") {
             alert("Please reset the game.");
         } else if (playerScore < 21) {
@@ -109,7 +111,7 @@ function playBank(bankCard, playerStatus) {
     while (bankScore < 17);
     document.getElementById("bankScore").innerText = bankScore;
 
-    if (bankScore > 21){
+    if (bankScore > 21) {
         document.getElementById("bankScore").style.color = "red";
     }
     if (playerStatus === "neutral") {

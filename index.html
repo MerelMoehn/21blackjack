@@ -12,7 +12,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poiret+One&display=swap');
     </style>
-   
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Let's play 21!</title>
 </head>
@@ -27,36 +27,39 @@
     </div>
 
     <div class="explanation-area">
-            <h2>Game Explanation</h2>
-            <p>Hi <span id="userName"></span>,</p>
-            <ul>
-                <li>This game is a simulation of the 21 game. When clicking 'Hit me!' you will get a card.</li>
-                <li>A card can have
-                    the value of: 1, 2, 3, 11, 7, 8, 9, 10, 11.</li>
-                    <li>If you go over 21, you lose.</li>
-                    <li>You win when: 
-                        <ul>
-                        <li>A) you score 21 and the bank's score is ≠ 21</li>
-                        <li>B) your score is less than 21 but closer than 21 than
-                            the bank's score.</li>
-                        </ul>
-                    </li>
-                        <li>The bank will take a card as long as its score is less than 17. When its score is 17 or higher, the bank holds.</li>
-            </ul>
-            <p>Be smart, but don't be too cocky! Click, 'Hit Me!' to start the game. Good luck!</p>
+        <h2>Game Explanation</h2>
+        <p>Hi <span id="userName"></span>,</p>
+        <ul>
+            <li>This game is a simulation of the 21 game. When clicking 'Hit me!' you will get a card.</li>
+            <li>A card can have
+                the value of: 1, 2, 3, 11, 7, 8, 9, 10, 11.</li>
+            <li>If you go over 21, you lose.</li>
+            <li>You win when:
+                <ul>
+                    <li>A) you score 21 and the bank's score is ≠ 21</li>
+                    <li>B) your score is less than 21 but closer than 21 than
+                        the bank's score.</li>
+                </ul>
+            </li>
+            <li>The bank will take a card as long as its score is less than 17. When its score is 17 or higher, the bank
+                holds.</li>
+        </ul>
+        <p>Be smart, but don't be too cocky! Click, 'Hit Me!' to start the game. Good luck!</p>
     </div>
 
     <div class="score-area">
         <div id="score-overview">
-            <p class="scores"><i class="fa-regular fa-face-surprise"></i> Your card: <span id="playersCard">0</span></p> 
-            <p class="scores"><i  id="smiley" class="fa-regular fa-face-laugh-beam"></i>Your score: <span id="playerScore">0</span></p>
+            <p class="scores"><i class="fa-regular fa-face-surprise"></i> Your card: <span id="playersCard">0</span></p>
+            <p class="scores"><i id="smiley" class="fa-regular fa-face-laugh-beam"></i>Your score: <span
+                    id="playerScore">0</span></p>
             <p class="scores"><i class="fa-solid fa-building-columns"></i> Bank score: <span id="bankScore">?</span></p>
         </div>
         <div id="winner"> </div>
     </div>
 
     <div class="controls-area">
-        <button data-type="hit" class="btn btn--green" aria-label="Button to get a card and corresponding score">Hit me!</button>
+        <button data-type="hit" class="btn btn--green" aria-label="Button to get a card and corresponding score">Hit
+            me!</button>
         <button data-type="hold" class="btn btn--black" aria-label="Button to hold">Hold!</button>
         <button data-type="reset" class="btn btn--grey" aria-label="Button to reset all values">Reset</button>
     </div>

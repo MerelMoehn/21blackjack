@@ -180,7 +180,7 @@ i {
 }
 
 /* --------- media queries */
-/* for screen size from 500px wide and up */  
+/* for screen size from 500px wide and up */
 @media screen and (min-width: 500px) {
     .btn {
         width: 100px;
@@ -200,7 +200,7 @@ i {
     }
 }
 
-@media screen and (min-width: 1000px) {   
+@media screen and (min-width: 1000px) {
     i {
         font-size: 150%;
     }
