@@ -33,12 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function getName() {
     let userName = document.getElementById("name-box").value;
-    if (isNaN(userName) == false) {
-        alert("Oeps! You did not enter text, probably a number or sign. Try again!");
-    } else {
         document.getElementById("userName").innerText = userName;
         return userName;
-    }
 }
 
 /**

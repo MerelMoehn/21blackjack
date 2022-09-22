@@ -32,7 +32,7 @@ The colors used for the website are black, white, green, and grey.
 * Logo: this directly indicates to the user that this website is about twenty-one.
 
 ![Image of name submit option](./assets/images/usernamepersonalisation.png)
-* Name submit: this functionality gives the user the option to submit his or her name. This will personalize the page and game. The input is required and validated. Numbers are not allowed.
+* Name submit: this functionality gives the user the option to submit his or her name. This will personalize the page and game. The input is required. The user can also submit the name by clicking 'enter'.
 
 ![Image of explanation section](./assets/images/explanationtwentyone.png)
 * Explanation section: the explanation section provides the user with the rules of the game.
